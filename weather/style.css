@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mukta;
+}
+
+body{
+    background-color: rgb(194, 190, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+    height: 70vh;
+    width: 25vw;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow:10px 10px 30px black;
+    background:linear-gradient(135deg,#00feba,#5b548a);
+}
+.nav{
+    height: 8vh;
+    width: 22vw;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+#search{
+    height: 6vh;
+    width: 18vw;
+    border-radius: 20px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    background-color: azure;
+    color: rgb(136, 137, 139);
+    font-size: larger;
+    text-transform: capitalize;
+    border: 1px solid white;
+    transition: all 1s ease-in-out;
+}
+#iconsearch{
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+#iconsearch>svg{
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+}
+#weathericon{
+    height: 9vw;
+    width: 9vw;
+    background-color: aquamarine;
+}
+.weather{
+    color: white;
+    width: 20vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#temperature{
+    height: 5vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:5vw;
+}
+#city{
+    height: 3vw;
+    width: 15vw;
+    font-size: 3vw;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: space-between;
+    height: 4vw;
+    width:20vw;
+    color: white;
+}
+.humidity,.windspeed{
+    height: 3vw;
+    width: 10vw;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#one,#three{
+    height: 1vw;
+    width: 5vw;
+    font-size: large;
+    font-weight: bolder;
+}
+.datawindspeed,.datahumidity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#two,#four{
+    height: 1vw;
+    width: 5vw;
+}
+#humid,#wind{
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#humid>svg,#wind>svg{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+}
