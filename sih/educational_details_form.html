@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Details Form</title>
+    <link rel="stylesheet" href="educational_details_form.css">
+</head>
+<body>
+    <!-- server code not to touch -->
+    <div id = "svData">
+        <%= JSON.stringify(data) %>
+    </div>
+    <!-- server code ends -->
+    <div class="form-container">
+        <h1>Educational Details</h1>
+        <form id="educationalDetailsForm" class="educational-details-form" method="POST" action="/pmsss/<%=data._id.toString()%>/education" enctype="multipart/form-data">
+            <div class="c">
+                <fieldset class="field">
+                    <legend id="leg">Highest Qualification</legend>
+                    <div class="form-group">
+                        <label for="highestQualification">Highest Qualification</label>
+                        <!-- <input value="<%=data.highestQualification.qualification%>" type="text" id="highestQualification" name="highestQualification" placeholder="Enter your highest qualification" required> -->
+                        <input  type="text" id="highestQualification" name="highestQualification" placeholder="Enter your highest qualification" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marksHighestQualification">Marks in Highest Qualification (%)</label>
+                        <!-- <input value="<%=data.highestQualification.marks%>" type="number" id="marksHighestQualification" name="marksHighestQualification" min="0" max="100" step="0.01" placeholder="Enter your marks (%)" required> -->
+                        <input  type="number" id="marksHighestQualification" name="marksHighestQualification" min="0" max="100" step="0.01" placeholder="Enter your marks (%)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="highestQualificationMarksheet">Upload Marksheet (PDF)</label>
+                        <input type="file" id="highestQualificationMarksheet" name="highestQualificationMarksheet" accept="application/pdf" required>
+                        <!-- <% if (data.highestQualification.marksheet) { %>
+                            <p style="font-size:small;">Existing file: <%= data.highestQualification.marksheet %></p>
+                        <% } %> -->
+                    </div>
+                </fieldset>
+            
+                <fieldset class="field">
+                    <legend id="leg">12th Board Details</legend>
+                    <div class="form-group">
+                        <label for="board12th">12th Board</label>
+                        <select id="board12th" name="board12th" required>
+                            <option value="">Select Board</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="marks12th">Marks Obtained in 12th (%)</label>
+                        <!-- <input value="<%=data.twelth.marks%>" type="number" id="marks12th" name="marks12th" min="0" max="100" step="0.01" placeholder="Enter your marks (%)" required> -->
+                        <input  type="number" id="marks12th" name="marks12th" min="0" max="100" step="0.01" placeholder="Enter your marks (%)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marksheet12th">Upload 12th Marksheet (PDF)</label>
+                        <input type="file" id="marksheet12th" name="marksheet12th" accept="application/pdf" required>
+                        <!-- <% if (data.twelth.marksheet) { %>
+                            <p style="font-size:small;">Existing file: <%= data.twelth.marksheet %></p>
+                        <% } %> -->
+                    </div>
+                </fieldset>
+            </div>
+            
+
+            <fieldset class="field fid">
+                <legend id="leg">10th Board Details</legend>
+                <div class="form-group">
+                    <label for="board10th">10th Board</label>
+                    <select id="board10th" name="board10th" required>
+                        <option value="">Select Board</option>
+                    </select>
+                </div>
+                <div class="imp">
+                    <div class="form-group">
+                        <label for="marks10th">Marks Obtained in 10th (%)</label>
+                        <!-- <input value="<%=data.twelth.marks%>" type="number" id="marks10th" name="marks10th" min="0" max="100" step="0.01" placeholder="Enter your marks (%)" required> -->
+                        <input  type="number" id="marks10th" name="marks10th" min="0" max="100" step="0.01" placeholder="Enter your marks (%)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marksheet10th">Upload 10th Marksheet (PDF)</label>
+                        <input type="file" id="marksheet10th" name="marksheet10th" accept="application/pdf" required>
+                        <!-- <% if (data.tenth.marksheet) { %>
+                            <p style="font-size:small;">Existing file: <%= data.tenth.marksheet %></p>
+                        <% } %> -->
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit">Save & Update</button>
+        </form>
+    </div>
+
+    <script src="educational_info.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+#svData{
+    display: none;
+  }
+  /*server code ends*/
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent body scroll */
+    color: #333;
+}
+
+.form-container {
+    background-color: #add7f52d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh; /* Make sure the form container does not exceed the viewport height */
+    overflow-y: auto; /* Allow scrolling inside the form container */
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(14, 14, 158);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+.align{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+legend {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0 10px;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(14, 14, 158);
+}
+/* #photoPreview{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+} */
+.form-group {
+    margin-bottom: 15px;
+    font-size: larger;
+    width: 500px;
+}
+.form-group>input{
+    width: 34vw;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 214, 214);
+}
+.form-group>label{
+    font-size: large;
+    font-weight:200
+}
+.form-group>input:focus{
+    background-color:rgb(244, 255, 255);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: rgb(14, 14, 158);
+    outline: none;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+.xyz{
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 10px; */
+    /* background-color: red; */
+}
+
+#lastName,#middleName{
+    padding-left: 10px;
+}
+
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.photo-preview {
+    margin-top: 10px;
+}
+
+.photo-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(14, 14, 158);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(61, 61, 225);
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .photo-preview img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .progress-circle {
+        width: 80px;
+        height: 80px;
+    }
+}
+.section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(14, 14, 158);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.aligned{
+    display: flex;
+    /* flex-direction: column; */
+    width: 900px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: green; */
+}
+.aligned>.form-group>input{
+    width: 400px;
+}
+select[data-selected] {
+    /* font-weight: bold; */
+    color: #000; /* Style it to make the selected text visible */
+}
+
+select {
+    color: #888; /* Default color for the placeholder */
+}

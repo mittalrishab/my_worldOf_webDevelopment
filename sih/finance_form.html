@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Details Form</title>
+    <link rel="stylesheet" href="finance_form.css">
+</head>
+<body>
+     <!-- server code not to touch -->
+     <div id = "svData">
+        <%= JSON.stringify(data) %>
+    </div>
+    <!-- server code ends -->
+    <div class="form-container">
+        <h1>Finance Details</h1>
+        <form class="finance-details-form" method="POST" action="/pmsss/<%=data._id.toString()%>/finance" enctype="multipart/form-data">
+            <div class="aaa">
+                <div class="form-group">
+                    <label for="accountHolderName">Account Holder Name</label>
+                    <!-- <input value="<%=data.accountHolderName%>" type="text" id="accountHolderName" name="accountHolderName" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" placeholder="Enter your name" required> -->
+                    <input  type="text" id="accountHolderName" name="accountHolderName" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="accountNumber">Account Number</label>
+                    <!-- <input  value="<%=data.accountNumber%>" type="tel" id="accountNumber" name="accountNumber" pattern="\d+" title="Account number should only contain digits" placeholder="Enter your account number" required> -->
+                    <input   type="tel" id="accountNumber" name="accountNumber" pattern="\d+" title="Account number should only contain digits" placeholder="Enter your account number" required>
+                </div>
+            </div>
+            <div class="aaa">
+                <div class="form-group">
+                    <label for="panCardNumber">PAN Card Number</label>
+                    <!-- <input value="<%=data.pan%>" type="text" id="panCardNumber" name="panCardNumber" pattern="[A-Z]{5}\d{4}[A-Z]{1}" title="PAN card number must be in the format ABCDE1234F" placeholder="Enter your PAN card number" required> -->
+                    <input  type="text" id="panCardNumber" name="panCardNumber" pattern="[A-Z]{5}\d{4}[A-Z]{1}" title="PAN card number must be in the format ABCDE1234F" placeholder="Enter your PAN card number" required>
+                </div>
+                <div class="form-group">
+                    <label for="bankName">Bank Name</label>
+                    <!-- <input value="<%=data.bankName%>" type="text" id="bankName" name="bankName" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" placeholder="Enter your bank name" required> -->
+                    <input  type="text" id="bankName" name="bankName" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" placeholder="Enter your bank name" required>
+                </div>
+            </div>
+            <div class="aaa">
+                <div class="form-group">
+                    <label for="bankIFSCCode">Bank IFSC Code</label>
+                    <!-- <input value="<%=data.bankIFSC%>" type="text" id="bankIFSCCode" name="bankIFSCCode" pattern="[A-Z]{4}0[A-Z0-9]{6}" title="IFSC code must be in the format ABCD0EFGHIJ" placeholder="Enter your bank IFSC code" required> -->
+                    <input  type="text" id="bankIFSCCode" name="bankIFSCCode" pattern="[A-Z]{4}0[A-Z0-9]{6}" title="IFSC code must be in the format ABCD0EFGHIJ" placeholder="Enter your bank IFSC code" required>
+                </div>
+                <div class="form-group">
+                    <label for="bankAddress">Bank Address</label>
+                    <!-- <input value="<%=data.bankAddress%>" type="text" id="bankAddress" name="bankAddress" placeholder="Enter your bank address" required> -->
+                    <input  type="text" id="bankAddress" name="bankAddress" placeholder="Enter your bank address" required>
+                </div>
+            </div>
+            <div id="pass">
+                <div class="form-group passbook-upload">
+                    <label for="passbookPhoto">Passbook Photo</label>
+                    <input type="file" id="passbookPhoto" name="passbookPhoto" accept="image/jpeg" required>
+                    <!-- <% if (data.passbookphoto) { %>
+                        <p style="font-size:small;">Existing file: <%= data.passbookphoto %></p>
+                      <% } %> -->
+                </div>
+            </div>
+            <button id="sub" type="submit">Submit</button>
+        </form>
+        <script src="finance_info.js"></script>
+    </div>
+</body>
+</html>

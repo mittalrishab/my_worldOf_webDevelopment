@@ -1,0 +1,109 @@
+#svData{
+    display: none;
+}
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#heading{
+    height: 30px;
+    /* background-color: yellow; */
+    margin-bottom: 10px;
+    color: rgb(14, 14, 158);
+}
+#head{
+    margin-left: 20px;
+    font-size: larger;
+    font-weight: bold;
+    /* background-color: rgb(255, 255, 255); */
+}
+.container{
+    background-color: #f4f4f4;
+    width: 100vw;
+    height: 230vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.parent_details_form {
+    background-color: rgba(173, 215, 245, 0.35); /* Adjusted for better transparency */
+    width: 70vw;
+    height: 220vh;
+    box-shadow: 5px 5px 30px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.father,.mother{
+    width: 60vw;
+    height: 50vw;
+    border-radius: 20px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .form-group{
+    width: 80vw;
+    height: 10vh;
+    background-color: red;
+} */
+
+.fat,.mot{
+    height: 90vh;
+    border-radius: 20px;
+    width: 55vw;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divs{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    width: 50vw;
+    /* background-color: aqua; */
+    flex-direction: column;
+    justify-content: space-around;
+}
+.form-group{
+    height: 10vh;
+    width: 50vw;
+    border-radius: 10px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.form-group>input{
+    height: 6vh;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.form-group>input:focus{
+    background-color: rgba(181, 249, 249, 0.401);
+}
+.form-group>label{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.submit{
+    height: 5vh;
+    width: 60vw;
+    background-color: rgb(14, 14, 158);
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+}
+.submit:hover{
+    background-color: rgb(37, 37, 252);
+}

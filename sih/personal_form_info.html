@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Personal Details Form</title>
+    <link rel="stylesheet" href="personal_form_info.css">
+</head>
+
+<body>
+     <!-- server code not to touch -->
+  <div id = "svData">
+    <%= JSON.stringify(data) %>
+</div>
+    <div class="form-container">
+        <h1 style="font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: 800;">Personal Details</h1>
+        <form id="personalDetailsForm" class="parent-details-form" method="POST" action="/pmsss/<%=data._id.toString()%>/personal" enctype="multipart/form-data">
+            <fieldset class="align">
+                <legend>Basic Information</legend>
+                <div class="xyz">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <!-- <input value="<%=data.name.first%>" type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" title="Only alphabets are allowed" placeholder="Enter your first name"> -->
+                        <input type="text" id="firstName" name="firstName" pattern="[A-Za-z]+" title="Only alphabets are allowed" placeholder="Enter your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <!-- <input value="<%=data.name.middle%>" id="middleName" name="middleName" pattern="[A-Za-z]+" placeholder="Enter your middle name"> -->
+                        <input  id="middleName" name="middleName" pattern="[A-Za-z]+" placeholder="Enter your middle name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <!-- <input value="<%=data.name.last%>" id="lastName" name="lastName" pattern="[A-Za-z]+" title="Only alphabets are allowed" placeholder="Enter your last name"> -->
+                        <input  id="lastName" name="lastName" pattern="[A-Za-z]+" title="Only alphabets are allowed" placeholder="Enter your last name">
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="section-heading">Upload Photo</h2>
+                    <div class="photo-upload">
+                        <input type="file" id="photo" name="photo" accept="image/jpeg" placeholder="Choose a photo">
+                        <div class="photo-preview">
+                            <img  id="photoPreview" name="image" src="#" alt="Photo Preview" style="display:none;">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="heading">Personal Details</legend>
+                <div class="peralign">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <!-- <input value="%=data.dob%>" type="text" id="dob" name="dob" onfocus="(this.type='date')" placeholder="Select your date of birth"> -->
+                        <input type="text" id="dob" name="dob" onfocus="(this.type='date')" placeholder="Select your date of birth">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <!-- <select value="%=data.gender %>" id="gender" name="gender"> -->
+                        <select  id="gender" name="gender">
+                            <option value="" disabled selected>Select your gender</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodGroup">Blood Group</label>
+                        <!-- <select value="<%=data.blood%>" id="bloodGroup" name="blood"> -->
+                        <select  id="bloodGroup" name="blood">
+                            <option value="" disabled selected>Select your blood group</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stateOfBirth">State of Birth</label>
+                        <select id="stateOfBirth" name="state">
+                        <select value="<%=data.state %>" id="stateOfBirth" name="state">
+                            <option value="" disabled selected>Select your state of birth</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityOfBirth">City of Birth</label>
+                        <!-- <input value="<%=data.city%>" type="text" id="cityOfBirth" name="city" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" placeholder="Enter your city of birth"> -->
+                        <input  type="text" id="cityOfBirth" name="city" pattern="[A-Za-z\s]+" title="Only alphabets are allowed" placeholder="Enter your city of birth">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="aligned">
+                    <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <!-- <input value="<%=data.ph_no%>"  type="tel" id="mobile" name="mobile" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" placeholder="Enter your mobile number"> -->
+                        <input  type="tel" id="mobile" name="mobile" pattern="\d{10}" title="Please enter a valid 10-digit mobile number" placeholder="Enter your mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <!-- <input value="<%=data.email%>" type="email" id="email" name="email" placeholder="Enter your email"> -->
+                        <input  type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Documents</legend>
+                <div class="form-group">
+                    <label for="aadhaarNumber">Aadhaar Number</label>
+                    <!-- <input value="<%=data.aadhar%>" type="text" id="aadhaarNumber" name="aadhaar" pattern="\d{12}" title="Aadhaar number must be exactly 12 digits" placeholder="Enter your 12-digit Aadhaar number"> -->
+                    <input  type="text" id="aadhaarNumber" name="aadhaar" pattern="\d{12}" title="Aadhaar number must be exactly 12 digits" placeholder="Enter your 12-digit Aadhaar number">
+                </div>
+                <div class="form-group">
+                    <label for="aadhaarCard">Aadhaar Card (PDF)</label>
+                    <input type="file" id="aadhaarCard" name="aadhaarFile" accept="application/pdf" placeholder="Upload Aadhaar Card PDF">
+                </div>
+                <div class="form-group">
+                    <label for="addressProof">Address Proof (PDF)</label>
+                    <input type="file" id="addressProof" name="address" accept="application/pdf" placeholder="Upload Address Proof PDF">
+                </div>
+            </fieldset>
+            <button type="submit">Save and Update</button>
+        </form>
+    </div>
+
+    <script src="personal_info.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parents Details Form</title>
+    <link rel="stylesheet" href="family_info.css">
+</head>
+
+<body>
+
+  <!-- server code not to touch -->
+    <div id = "svData">
+        <%= JSON.stringify(data) %>
+    </div>
+    <!-- server code ends -->
+
+    <div class="container">
+        <form action="#" method="post">
+            <div class="parent_details_form">
+                <h1 id="heading">Parents Details</h1>
+                <div class="father">
+                    <fieldset class="fat">
+                        <legend id="head">Father's Details</legend>
+                        <div class="divs">
+                            <div class="form-group">
+                                <label for="fatherName">Name</label>
+                                <!-- <input value="<%=data.father.name%>" type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" > -->
+                                <input  type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" >
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherContact">Contact No.</label>
+                                <!-- <input value="<%=data.father.contact%>" type="tel" id="fatherContact" name="fatherContact" placeholder="Enter father's contact number" > -->
+                                <input  type="tel" id="fatherContact" name="fatherContact" placeholder="Enter father's contact number" >
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherEdu">Educational Qualification</label>
+                                <!-- <input value="<%=data.father.education%>" type="text" id="fatherEdu" name="fatherEdu" placeholder="Enter father's educational qualification" > -->
+                                <input type="text" id="fatherEdu" name="fatherEdu" placeholder="Enter father's educational qualification" >
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherOccupation">Occupation</label>
+                                <!-- <input value="<%=data.father.occupation%>"  -->
+                                <input 
+                                type="text" id="fatherOccupation" name="fatherOccupation" placeholder="Enter father's occupation" >
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherEmail">Email ID</label>
+                                <!-- <input value="<%=data.father.email%>" type="email" id="fatherEmail" name="fatherEmail" placeholder="Enter father's email ID" > -->
+                                <input type="email" id="fatherEmail" name="fatherEmail" placeholder="Enter father's email ID" >
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherPAN">PAN Card No. (optional)</label>
+                                <!-- <input value="<%=data.father.pan%>" type="text" id="fatherPAN" name="fatherPAN" placeholder="Enter father's PAN card number" pattern="[A-Za-z0-9]{10}" title="PAN card number should be 10 alphanumeric characters"> -->
+                                <input type="text" id="fatherPAN" name="fatherPAN" placeholder="Enter father's PAN card number" pattern="[A-Za-z0-9]{10}" title="PAN card number should be 10 alphanumeric characters">
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherAadhaar">Aadhaar No. (optional)</label>
+                                <!-- <input value="<%=data.father.aadhar%>" type="text" id="fatherAadhaar" name="fatherAadhaar" placeholder="Enter father's Aadhaar number" pattern="[0-9]{12}" title="Aadhaar number should be 12 digits"> -->
+                                <input  type="text" id="fatherAadhaar" name="fatherAadhaar" placeholder="Enter father's Aadhaar number" pattern="[0-9]{12}" title="Aadhaar number should be 12 digits">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="mother">
+                    <fieldset class="mot">
+                        <legend id="head">Mother's Details</legend>
+                        <div class="divs">
+                            <div class="form-group">
+                                <label for="motherName">Name</label>
+                                <!-- <input value="<%=data.mother.name%>" type="text" id="motherName" name="motherName" placeholder="Enter mother's name" > -->
+                                <input  type="text" id="motherName" name="motherName" placeholder="Enter mother's name" >
+                            </div>
+                            <div class="form-group">
+                                <label for="motherContact">Contact No.</label>
+                                <!-- <input value="<%=data.mother.contact%>" type="tel" id="motherContact" name="motherContact" placeholder="Enter mother's contact number" > -->
+                                <input type="tel" id="motherContact" name="motherContact" placeholder="Enter mother's contact number" >
+                            </div>
+                            <div class="form-group">
+                                <label for="motherEdu">Educational Qualification</label>
+                                <!-- <input value="<%=data.mother.education%>" type="text" id="motherEdu" name="motherEdu" placeholder="Enter mother's educational qualification" > -->
+                                <input  type="text" id="motherEdu" name="motherEdu" placeholder="Enter mother's educational qualification" >
+                            </div>
+                            <div class="form-group">
+                                <label for="motherOccupation">Occupation</label>
+                                <!-- <input value="<%=data.mother.occupation%>" type="text" id="motherOccupation" name="motherOccupation" placeholder="Enter mother's occupation" > -->
+                                <input  type="text" id="motherOccupation" name="motherOccupation" placeholder="Enter mother's occupation" >
+                            </div>
+                            <div class="form-group">
+                                <label for="motherEmail">Email ID</label>
+                                <!-- <input value="<%=data.mother.email%>" type="email" id="motherEmail" name="motherEmail" placeholder="Enter mother's email ID" > -->
+                                <input  type="email" id="motherEmail" name="motherEmail" placeholder="Enter mother's email ID" >
+                            </div>
+                            <div class="form-group">
+                                <label for="motherPAN">PAN Card No. (optional)</label>
+                                <!-- <input value="<%=data.mother.pan%>" type="text" id="motherPAN" name="motherPAN" placeholder="Enter mother's PAN card number" pattern="[A-Za-z0-9]{10}" title="PAN card number should be 10 alphanumeric characters"> -->
+                                <input  type="text" id="motherPAN" name="motherPAN" placeholder="Enter mother's PAN card number" pattern="[A-Za-z0-9]{10}" title="PAN card number should be 10 alphanumeric characters">
+                            </div>
+                            <div class="form-group">
+                                <label for="motherAadhaar">Aadhaar No. (optional)</label>
+                                <!-- <input value="<%=data.mother.aadhar%>" type="text" id="motherAadhaar" name="motherAadhaar" placeholder="Enter mother's Aadhaar number" pattern="[0-9]{12}" title="Aadhaar number should be 12 digits"> -->
+                                <input  type="text" id="motherAadhaar" name="motherAadhaar" placeholder="Enter mother's Aadhaar number" pattern="[0-9]{12}" title="Aadhaar number should be 12 digits">
+                            </div>
+                        </div>
+                    </fieldset>
+                        
+                </div>
+                <div >
+                    <button class="submit" type="submit">Save And Update</button>
+                </div>
+            </div>
+
+        </form>
+        <script src="family_info.js"></script>
+
+    </div>
+</body>
+
+</html>
