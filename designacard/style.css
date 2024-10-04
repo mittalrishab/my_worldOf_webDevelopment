@@ -1,0 +1,237 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+.background{
+    background-color: rgba(224, 214, 214, 0.656);    
+    display: flex;
+    justify-content: center;
+    margin:60px;
+    width:500px;
+}
+.box{
+    background-color:white;
+    height: 75vh;
+    border-radius: 25px;
+    width: 30vw;
+    border:1px solid black;
+    cursor: zoom-in;
+    box-shadow: 2px 3px grey;
+    margin:20px;
+    transition: all 0.5s linear;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 15px 15px 30px rgb(196, 195, 195);
+
+}
+.box:hover{
+    transform:scale(1.1);
+    box-shadow: 10px 10px 40px black;
+}
+.box .overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.676);
+    opacity:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay span{
+    font-size: 30px; ;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    transition: all 0.5s linear;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.box .overlay:hover{
+    opacity: 1;
+}
+img{
+    width: 440px;
+    height: auto;
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 10px 10px 45px rgb(196, 195, 195);
+    
+}
+.caption{
+    border:0.5px solid black;
+    margin: 10px;
+    border-radius: 10px;
+    border-color: rgba(89, 87, 87, 0.306);
+    padding:5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color:grey;   
+}
+.lorem{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    padding: 5px;
+    color:grey;
+    cursor: text;
+}
+.readmore{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    border-radius: 15px;
+    background-color: rgb(143, 255, 255);
+    display:inline-block;
+    padding:10px;
+    color:dodgerblue;
+    font-weight: bold;
+    margin-left: 170px;
+    cursor: pointer;
+}
+.readmore:hover{
+    background-color: aqua;
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin:10px;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(231, 124, 124, 0.707); */
+}
+.box2{
+    height: 60vh;
+    width: 30vw;
+    border-radius: 25px;
+    background-color: rgba(227, 233, 112, 0.945);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    /* padding:40px; */
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    color:rgb(0, 17, 255);
+    font-size: larger;
+    box-shadow: 15px 15px 40px black;
+}
+.box2>img{
+    margin:20px;
+    background-color: rgb(67, 226, 43);
+    transition: all 0.5s linear;
+    height: 30vh;
+    width:20vw;
+}
+.i:hover{
+    transform: scale(1.1);
+}
+#h2{
+    font-size: large;
+}
+#p{
+    text-align: center;
+}
+
+.box3{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 20px black;
+    transition:all 0.5s linear;
+}
+.box3:hover:hover{
+    transform: scale(1.1);
+}
+.page{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 25px;
+    width:400px;
+    height: 500px;
+    position: relative;
+    padding-top: 0px;
+    cursor: pointer;
+}
+.box3 h2{
+    position: absolute;
+    top: 200px;
+    background-color: rgb(255, 255, 255);
+}
+.box3 .para{
+    height: 70px;
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    top: 250px;
+    background-color: azure;
+}
+.ban{
+    display:flex;
+    width: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #a5edf8;
+    position: absolute;
+    top: 350px;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+}
+.ban:hover{
+    background-color: #4ad9ef;
+    transform: scaleX(0.9);
+}
+#order{
+    font-size: medium;
+}
+.pay{
+    position: absolute;
+    top:430px ;
+    height: 40px;
+    width:350px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    box-shadow:  0px 10px 20px rgba(37, 37, 37, 0.686);
+    background-color: rgb(17, 18, 18);
+}
+.pay:hover{
+    background-color: rgba(46, 40, 40, 0.925);
+}
+.box3 img{
+    margin:0;
+    height:200px;
+    box-shadow: none;
+    position: absolute;
+    top:0px;
+    border-end-end-radius: 0px;
+    border-end-start-radius: 0px;
+}
+.box3 svg{
+    height:30px ;
+}
+
+#cancel{
+    position: absolute;
+    bottom:20px;
+    font-weight: bolder;
+}
