@@ -1,0 +1,298 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: Mukta;
+}
+body{
+    background-color: rgb(64, 65, 65);
+}
+
+.firstpage{
+    height: 90vh;
+    background-image: url("bgimage.jpg");
+}
+.ba{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.351);
+}
+.header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    height: 10vh;
+    width:80vw ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logoimage{
+    height:80px;
+    width:200px;
+}
+
+.but{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width:250px;
+}
+#lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+    width: 130px;
+    min-width: auto;
+    border: 1px solid white;
+    height: 40px;
+    padding:10px;
+    border-radius:4px ;
+}
+#lang:hover{
+    border:2px solid white;
+}
+#sign:hover{
+    background-color: rgb(236, 63, 11);
+}
+
+#sign{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(213, 17, 17);
+    width: 90px;
+    height: 40px;
+    padding:10px;
+    border-radius:4px;
+}
+.container{
+    background-color: rgba(0, 0, 0, 0);    height: 60vh;
+    flex-direction: column;
+    width: 80vw;
+    margin:10px ;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    height: 50vh;
+    width: 70vw;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);}
+.content>h1{
+    text-align: center;
+}
+#unlimit{
+    font-size: 50px;
+    font-family:Helvetica, sans-serif;
+    font-weight: bolder;
+}
+#watch{
+    font-size:xx-large;
+}
+#re{
+    font-size: larger;
+}
+.content>h3{
+    text-align: center;
+}
+.searches{
+    display: flex;
+}
+#searchbox{
+    padding:15px;
+    font-size: large;
+    width: 50vw;
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    border-radius: 5px;background-color: rgba(0, 0, 0, 0.131);
+}
+#searchbox:focus{
+    border:4px solid white;
+}
+#bu{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    font-size: large;
+    justify-content: center;
+    height: 55px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+#bu:hover{
+    background-color: rgb(236, 63, 11);
+}
+
+
+.secondpage,.thirdpage,.fourthpage,.fifthpage{
+    height: 80vh;
+    margin-top: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.pages{
+    width: 80vw;
+    height: 80vh;
+    background-color:rgb(0, 0, 0) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.image{
+    width: 30vw;
+    height: 60vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.boxed{
+    width: 40vw;
+    height: 60vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.boxed>h2{
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    line-height: 110%;
+}
+.boxed>p{
+    color: white;
+    font-size: xx-large;
+    line-height: 90%;
+}
+.image>img{
+    position:absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.sixthpage{
+    height: 150vh;
+    background-color:rgb(0, 0, 0);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.faq{
+    width: 60vw;
+    height: 40vw;
+    display: flex;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+#faaq{
+    font-size: 10vh;
+    font-weight: bolder;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+.questions{
+    background-color: rgb(46, 46, 46);
+    margin: 10px;
+    padding: 30px;
+    height: 12vh;
+    display: flex;
+    width: 70vw;
+    font-size: 25px;
+    color: white;
+    align-items: center;
+}
+.questions:hover{
+    background-color: rgb(110, 110, 110); ;
+}
+
+.end{
+    color: white;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+}
+#reds{
+    font-size: x-large;
+}
+.s{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bus{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    font-size: large;
+    justify-content: center;
+    height: 54px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+#bus:hover{
+    background-color: rgb(198, 2, 2);
+}
+
+.seventhpage{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: 10px;
+    height: 60vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    text-decoration:underline ;
+}
+.listf{
+    height: 30vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+}
+.footer>div{
+    text-align: center;
+}
+.ite{
+    list-style-type:none;
+}
