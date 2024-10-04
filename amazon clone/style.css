@@ -1,0 +1,248 @@
+*{
+    margin: 0;padding: 0;
+    
+}
+nav{
+    height:10vh;
+    /* width:100vw; */
+    background-color: rgba(20, 19, 19, 0.964);
+    display: flex;
+    box-sizing: border-box;
+}
+.background{
+    width:96vw;
+    height: 61vh;
+    box-sizing: border-box;
+    z-index: -10;
+    margin-left:26px;
+}
+.secondarynavbar{
+    display: flex;
+    align-items: center;
+    background-color: rgba(17, 17, 17, 0.863);
+    height:45px;
+    color:white;
+    /* width:100vw; */
+    box-sizing: border-box;
+}
+.amazonlogo{
+    margin: 6px;
+    height:60px;
+    width:200px;
+}
+.amazonlogo:hover{
+    border:2px solid white;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    height:60px;
+    background-color:black;
+}
+.box:hover{
+    border:2px solid white;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: small;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+}
+
+#all{
+    height:40px;
+    width:40px;
+    background-color: rgb(240, 236, 236);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#all:hover{
+    background-color: rgb(220, 212, 212);
+}
+#searchbox{
+    height:40px;
+    width:600px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+svg{
+    height: 20px;
+    width:20px;
+}
+
+#b{
+    width: 40px;
+    background-color: rgb(250, 195, 93);
+    height: 40px;  
+    display: flex;
+    align-items:center ;
+    justify-content:center ;
+}
+#b:hover{
+    background-color: orange;
+}
+.b>svg{
+    margin: 10px;
+}
+.lang{
+    display: flex;
+    margin-top:6px;
+    border-radius: 5px;
+    margin-left:4px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.lang:hover{
+    border: 2px solid white;
+}
+#lang{
+    font-weight: bold;
+    color: aliceblue;
+    background-color: black;
+    height:60px;
+}
+.account{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: small;
+    margin:5px;
+    border-radius: 5px;
+    width:100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.return{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: small;
+    margin:4px;
+    width:70px;
+    align-items: center;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.account:hover{
+    border:2px solid white;
+}
+.return:hover{
+    border:2px solid white;
+}
+#cart{
+    margin-top:10px;
+    border-radius:5px;
+    margin-left: 5px;
+    margin-right:5px;
+}
+#cart:hover{
+    border:2px solid white;
+}
+
+.allscroll{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.width{
+    margin:8px;    
+}
+.width:hover{
+    border:2px solid white;
+}
+
+.boxes{
+    background-color:rgb(255, 255, 255) ;
+    width:450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.boxed{ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width:400px;
+    height: 300px;
+    font-size: small;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.text{
+    font-size: small;
+}
+.text:hover{
+    color:red;
+}
+p>pa{
+    background-color: rgb(255, 255, 255);
+}
+.banner{
+    display: flex;
+    padding:20px;
+    justify-content: space-evenly;
+}
+
+.foot{
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    background-color: #232F3E;
+    
+}
+.footbox{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    
+}
+.list{
+    height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list:hover{
+    text-decoration:2px underline white;
+}
+ul{
+    font-weight: bolder;
+}
+li{
+    padding:2px;
+}
+li:hover{
+    text-decoration:1px underline white;
+
+}
+.go{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: white;
+    background-color: #3b4e65;
+    font-weight: bold;
+}
+.go:hover{
+    background-color: #3c506e;
+}
