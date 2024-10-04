@@ -1,0 +1,82 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 132, 167, 0.673);
+}
+#name{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rebeccapurple;
+    text-decoration: underline;
+}
+
+.gamebox{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    background-color: rgb(246, 246, 246);
+    height:37vw;
+    width:37vw;
+    margin-top: 5px;
+    gap:0.5vw;
+    padding: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.602);
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px black;
+    
+}
+.box{
+    background-color:rgb(23, 170, 243); 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 5px;
+    font-size:xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    box-shadow: 3px 3px 5px;
+}
+.bomb,.flag{
+    height: 2vw;
+    width: 2vw;
+}
+#f{
+    height: 8vh;
+    box-shadow: 2px 2px 5px;
+    width: 8vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    background-color: pink;
+    /* background-color: rgb(239, 138, 155); */
+}
+
+.divs{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    color:rgb(255, 255, 255);
+    background-color: rgba(240, 54, 25, 0.79);
+    height:35vw;
+    width:35vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-decoration: underline;
+}
