@@ -1,0 +1,35 @@
+*{
+    max-width: 100%;
+}
+.clock{
+    background-color: rgb(82, 130, 224);
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+
+}
+.clockface{
+    height: 30vh;
+    width: 50vw;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    font-size: 5vw;
+    color: blue;
+}
+.clockface p{
+    font-size:2vw ;
+    text-align: center;
+}
+.hour,.minute,.second{
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

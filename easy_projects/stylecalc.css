@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* for calculator */
+
+    
+    .body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    .box{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 30vw;
+        background-color: black;
+        border-radius: 15px;
+        box-shadow: 5px 5px 60px black;
+    }
+    .mode{
+        height: 8vh;
+        width: 28vw;
+        border-radius: 10px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .mode>div{
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mode svg{
+        height: 3vh;
+        width: 3vh;
+    }
+    .pad svg{
+        height: 5vh;
+        width: 5vh;
+    }
+    .display{
+        height: 12vh;
+        width: 27vw;
+        background-color: rgb(68, 66, 66);
+        border-radius: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        padding-right: 15px;
+    }
+    .keys{
+        height: 53vh;
+        width: 28vw;
+        margin: 5px;
+        border-radius: 10px;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,1fr);
+        row-gap: 10px;
+        column-gap: 10px;
+        padding: 10px;
+    }
+    .pad{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: rgb(111, 111, 111);
+        border-radius: 10px;
+        font-size: xx-large;
+        font-family: Lato;
+        cursor: pointer;
+    }
+    .keys .equal{
+        grid-row-start: 4;
+        grid-row-end: 6;
+        grid-column-start:3 ;
+        grid-column-start:4;
+        background-color:aquamarine;
+        color: black;
+    }
+    #clear{
+        background-color: rgba(254, 168, 168, 0.399);
+        color: red;
+    }
+    #backspace{
+        background-color: azure;
+    }
+    
+
+
+
+    
+
