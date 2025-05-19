@@ -1,17 +1,17 @@
-*{
+* {
     max-width: 100%;
 }
-.clock{
+
+.digital-clock {
     background-color: rgb(82, 130, 224);
     height: 100vh;
-    /* width: 100vw; */
     display: flex;
     justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: center;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.clockface{
+
+.digital-clock-face {
     height: 30vh;
     width: 50vw;
     background-color: azure;
@@ -22,14 +22,23 @@
     font-size: 5vw;
     color: blue;
 }
-.clockface p{
-    font-size:2vw ;
+
+.digital-clock-face p {
+    font-size: 2vw;
     text-align: center;
 }
-.hour,.minute,.second{
+
+.digital-clock-hour,
+.digital-clock-minute,
+.digital-clock-second {
     padding: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.digital-clock-separator {
+    font-size: 5vw;
+    padding: 0 1vw;
 }

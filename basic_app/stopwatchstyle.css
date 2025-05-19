@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-.body{
+
+.stopwatch-app {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -13,7 +13,8 @@
     height: 100vh;
     width: 100vw;
 }
-.box{
+
+.stopwatch-display-box {
     height: 30vh;
     width: 40vw;
     background-color: rgba(0, 0, 0, 0.329);
@@ -26,10 +27,12 @@
     color: white;
     position: absolute;
 }
-h1{
+
+.stopwatch-display-box h1 {
     font-size: 80px;
 }
-.boxes{
+
+.stopwatch-background-image {
     background-image: url(image.jpeg);
     height: 30vh;
     width: 40vw;
@@ -38,13 +41,17 @@ h1{
     background-size: cover;
     box-shadow: 10px 10px 30px rgb(0, 0, 0);
 }
-.controls{
+
+.stopwatch-controls {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 20vw;
 }
-#play,#stop,#restart{
+
+#stopwatch-play-btn,
+#stopwatch-stop-btn,
+#stopwatch-reset-btn {
     height: 60px;
     width: 60px;
     background-color: red;
@@ -54,11 +61,16 @@ h1{
     border-radius: 50%;
     position: relative;
 }
-#stop,#restart{
-    background-color: rgba(0, 0, 0, 0.329);;
+
+#stopwatch-stop-btn,
+#stopwatch-reset-btn {
+    background-color: rgba(0, 0, 0, 0.329);
     border: 1px solid white;
 }
-#pl,#stp,#rest{
+
+#stopwatch-play-icon,
+#stopwatch-stop-icon,
+#stopwatch-reset-icon {
     height: 40px;
     width: 40px;
 }

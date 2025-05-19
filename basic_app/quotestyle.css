@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(imagebg.png) no-repeat center center/cover;
+}
+
+.quote-generator-container {
+    width: 550px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-generator-header {
+    font-size: 1.2rem;
+    border: solid 2px white;
+    color: white;
+    background-color: #262626;
+    padding: 5px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.quote-generator-main {
+    width: 130%;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px 40px;
+    box-shadow: 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quote-display {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: auto;
+    padding: 10px;
+}
+
+.quote-text {
+    width: 100%;
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.quote-author {
+    font-size: 1.6rem;
+    color: red;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.quote-button-wrapper button {
+    background-color: #262626;
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.quote-button-wrapper button:active {
+    background-color: rgb(98, 103, 104);
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    .quote-generator-container {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .quote-generator-main {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        padding: 30px 25px;
+    }
+
+    .quote-generator-header {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .quote-display {
+        font-size: 1.2rem;
+    }
+
+    .quote-author {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    .quote-button-wrapper button {
+        font-size: 1.1rem;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-attachment: fixed;
+    }
+
+    .quote-generator-container {
+        width: 95%;
+    }
+
+    .quote-generator-main {
+        padding: 20px 15px;
+        min-height: 350px;
+    }
+
+    .quote-generator-header {
+        font-size: 0.9rem;
+        margin: 10px auto;
+        padding: 3px;
+    }
+
+    .quote-display {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .quote-author {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+
+    .quote-button-wrapper button {
+        font-size: 1rem;
+        padding: 6px 10px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .quote-generator-main {
+        min-height: 300px;
+    }
+    
+    .quote-display {
+        font-size: 0.9rem;
+    }
+    
+    .quote-button-wrapper button {
+        font-size: 0.9rem;
+    }
+}
