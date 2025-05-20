@@ -29,7 +29,7 @@
 }
 
 .stopwatch-display-box h1 {
-    font-size: 80px;
+    font-size: 65%;
 }
 
 .stopwatch-background-image {
@@ -74,3 +74,4 @@
     height: 40px;
     width: 40px;
 }
+

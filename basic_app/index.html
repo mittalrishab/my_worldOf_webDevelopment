@@ -118,6 +118,9 @@
                 <form class="search-form">
                     <input type="text" id="search-input" placeholder="Search">
                 </form>
+                <div class="error">
+                    <p>Invalid City Name</p>
+                </div>
                 <div class="search-icon">
                     <!-- SVG for search icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -128,8 +131,8 @@
             </div>
             <div class="weather-icon"></div>
             <div class="weather-info">
-                <div class="temperature" id="temperature">22c</div>
-                <div class="city-name" id="city">Jaipur</div>
+                <div class="temperature" id="temperature"></div>
+                <div class="city-name" id="city"></div>
             </div>
             <div class="widget-footer">
                 <div class="humidity-info">
@@ -141,7 +144,7 @@
                         </svg>
                     </div>
                     <div class="humidity-data">
-                        <div class="humidity-value" id="humidity">53%</div>
+                        <div class="humidity-value" id="humidity"></div>
                         <p class="humidity-label">Humidity</p>
                     </div>
                 </div>
@@ -154,7 +157,7 @@
                         </svg>
                     </div>
                     <div class="wind-data">
-                        <div class="wind-value" id="wind-speed">5.66km/hr</div>
+                        <div class="wind-value" id="wind-speed"></div>
                         <p class="wind-label">Windspeed</p>
                     </div>
                 </div>
@@ -180,7 +183,7 @@
     </div>
 
 
-
+    <script src="scriptweather.js"></script>
     <script src="scriptcalc.js"></script>
     <script src="stopwatchscript.js"></script>
     <script src="scriptclock.js"></script>
