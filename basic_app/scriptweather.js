@@ -19,6 +19,7 @@ async function checkWeather(city) {
         // Set weather icon
         let iconSrc = '';
         const weatherMain = data.weather[0].main;
+        console.log(weatherMain);
         if (weatherMain === "Clouds") {
             iconSrc = 'weather_assets/clouds.png';
         } else if (weatherMain === "Clear") {

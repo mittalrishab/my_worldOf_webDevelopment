@@ -1,165 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>Enhanced Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Tic Tac Toe</h1>
-
-    <main>
-        <div class="box">
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg id="cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg id="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
+    <div class="background-elements" id="backgroundElements"></div>
+    <div class="container">
+        <header>
+            <h1>TIC TAC TOE</h1>
+            <div class="subtitle">The Ultimate Strategy Game</div>
+        </header>
+        <div class="game-container">
+            <div class="game-board">
+                <div class="box" id="gameBoard"></div>
+                <div class="controls">
+                    <button class="btn" id="newGameBtn">
+                        <i class="fas fa-plus-circle"></i> New Game
+                    </button>
+                    <button class="btn btn-reset" id="resetBtn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
                 </div>
             </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
+            <div class="game-info">
+                <div class="player-info">
+                    <div class="player-card" id="playerXCard">
+                        <div class="player-symbol">X</div>
+                        <div class="player-name">Player X</div>
+                        <div class="player-stats">Wins: <span id="playerXWins">0</span></div>
                     </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
+                    <div class="player-card" id="playerOCard">
+                        <div class="player-symbol">O</div>
+                        <div class="player-name">Player O</div>
+                        <div class="player-stats">Wins: <span id="playerOWins">0</span></div>
                     </div>
                 </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
+                <div class="status" id="statusMessage" aria-live="polite">
+                    Player X's Turn
+                </div>
+                <div class="scoreboard">
+                    <div class="score-title">Scoreboard</div>
+                    <div class="score-row">
+                        <span class="score-label">Games Played:</span>
+                        <span class="score-value" id="gamesPlayed">0</span>
                     </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
+                    <div class="score-row">
+                        <span class="score-label">X Wins:</span>
+                        <span class="score-value" id="xWins">0</span>
+                    </div>
+                    <div class="score-row">
+                        <span class="score-label">O Wins:</span>
+                        <span class="score-value" id="oWins">0</span>
+                    </div>
+                    <div class="score-row">
+                        <span class="score-label">Draws:</span>
+                        <span class="score-value" id="draws">0</span>
                     </div>
                 </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="sel">
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path fill="#7fff00"
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                        </svg>
-                    </div>
-                    <div class="bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#7fff00"
-                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                        </svg>
-                    </div>
+                <div class="game-history">
+                    <div class="history-title">Game History</div>
+                    <div id="historyList"></div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
     <script src="script.js"></script>
 </body>
-
 </html>
